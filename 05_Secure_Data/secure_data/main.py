@@ -78,7 +78,10 @@ def main():
                 - **Security**: After 3 Attempts, System Down.
             """)
         with col2:
-            st.image("image\lock.jpeg", width=200, caption="Secure Data Storage")
+            if os.path.exists("image/lock.jpeg"):
+              st.image("image/lock.jpeg", width=200, caption="Secure Data Storage")
+            else:
+              st.error("Image not found at image/lock.jpeg. Please check the file path and name.")
 
     elif choice == "Store Data":
         st.title("Store Data")
@@ -137,7 +140,10 @@ def main():
         st.title("Authentication Required")
         col1, col2 = st.columns([1,2])
         with col1:
-            st.image("image\lock.jpeg", width=200 , caption="Secure Data Storage")
+            if os.path.exists("image/lock.jpeg"):
+                st.image("image/lock.jpeg", width=200, caption="Secure Data Storage")
+            else:
+                st.error("Image not found at image/lock.jpeg. Please check the file path and name.")
         with col2:
             st.warning("You have exceeded the maximum number of attempts.")
             admin_pass =  st.text_input("Enter Admin Passkey", type="password")
