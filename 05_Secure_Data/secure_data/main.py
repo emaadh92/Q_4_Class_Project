@@ -78,7 +78,7 @@ def main():
                 - **Security**: After 3 Attempts, System Down.
             """)
         with col2:
-            st.image("image/lock.jpeg", width=200, caption="Secure Data Storage")
+            st.image("image\lock.jpeg", width=200, caption="Secure Data Storage")
 
     elif choice == "Store Data":
         st.title("Store Data")
@@ -137,7 +137,7 @@ def main():
         st.title("Authentication Required")
         col1, col2 = st.columns([1,2])
         with col1:
-            st.image("image/lock.jpeg", width=200 , caption="Secure Data Storage")
+            st.image("image\lock.jpeg", width=200 , caption="Secure Data Storage")
         with col2:
             st.warning("You have exceeded the maximum number of attempts.")
             admin_pass =  st.text_input("Enter Admin Passkey", type="password")
